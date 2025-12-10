@@ -1,5 +1,5 @@
     /*=============== GOOGLE FONTS ===============*/
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 
@@ -20,7 +20,7 @@
 
         /*=============== Font and typography ===============*/
         /* 5rem = 8px / 1rem = 16px ... */
-        --body-font: "Lora", serif;
+         font-family: "Lora", serif;
 
         --biggest-font-size: 2.25rem;
         --h1-font-size: 1.5rem;
@@ -54,7 +54,7 @@
     }
 
     /*=============== BASE ===============*/
-    {
+    *{
         box-sizing:border box;
         padding:0;
         margin:0;
@@ -124,10 +124,66 @@
 
     .main{
         overflow:hidden; /*Para animaciones*/
-        
+
     }
     /*=============== HEADER & NAV ===============*/
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: var(--z-fixed);
+        transition:.4s;
+    }
 
+    .nav{
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__logo{
+        font-weight:var(--font-medium);
+        color:var(--title-color);
+    }
+
+    @media screen and (max-width: 1023px) {
+        .nav__menu{
+            position:fixed;
+            bottom: 1.5rem;
+            background-color: var(--body-color);
+            box-shadow: 0 4px 12px hsla(220, 18%, 40%, .15);
+            width: 90%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 1.25rem 2.8rem;
+            border-radius: .5rem;
+          }
+          .nav__list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .nav__link{
+            color: var(--text-color-light);
+            font-weight: var(--font-medium);
+            display: grid;
+            justify-items: center;
+            row-gap: .25rem;
+          }
+
+          .nav__link i{
+            font-size: 1.25rem;
+          }
+          .nav__link span {
+            font-size: .688rem;
+          }
+
+    }
+    
     /* Change background header */
 
     /* Active link */
