@@ -185,9 +185,10 @@
     }
     
     /* Change background header */
+    .scroll-header {
     background-color: var(--body-color);
     box-shadow: 0 1px 4px hsla(220, 4%, 15%, .1);
-    }
+    } 
 
     /* Active link */
 
@@ -273,7 +274,7 @@
         display: flex;
         align-items:center;
         justify-content: space-between;
-        color var(--title-color);
+        color: var(--title-color);
         padding-right: .75rem;
     }
 
@@ -296,7 +297,49 @@
         transform: translateX(.25rem);
     }
     /*=============== COLLECTION ===============*/
+    .collection{
+        background-color: var(--bg-color-light);
+        overflow: hidden;
+    }
 
+    .collection__container{
+        position: relative;
+        height: 571px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .collection__title{
+        font-size: var(--h1-font-size);
+        margin-bottom: .75rem;
+    }
+
+    .collection__explore{
+        display: grid;
+        column-gap: 2rem;
+        position: absolute;
+    }
+
+    .collection__explore:nth-child(2){
+        grid-template-columns: 230px max-content;
+        bottom: 1rem;
+        margin-right: 5rem;
+    }
+
+    .collection__explore:nth-child(1){
+        grid-template-columns: max-content 230px;
+        top: 0;
+        margin-left: 5rem;
+    }
+
+    .collection__data-men {
+        margin-top: 2.5rem;
+    }
+
+    .collection__data-women{
+        align-self: flex-end;
+        margin-bottom: 2.5rem;
+    }
     /*=============== PRODUCTS ===============*/
 
     /*=============== BRANDS ===============*/
